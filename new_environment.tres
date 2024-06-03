@@ -1,0 +1,16 @@
+[gd_resource type="Environment" load_steps=3 format=2]
+
+[ext_resource path="res://textures/bg/bg_01.jpg" type="Texture" id=1]
+
+[sub_resource type="PanoramaSky" id=1]
+radiance_size = 0
+panorama = ExtResource( 1 )
+
+[resource]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_sky_contribution = 0.4
+fog_depth_end = 50.0
+fog_transmit_enabled = true
+fog_height_enabled = true

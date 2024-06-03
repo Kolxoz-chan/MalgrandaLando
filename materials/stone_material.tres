@@ -1,0 +1,9 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://textures/props/stone_01.jpg" type="Texture" id=1]
+
+[resource]
+params_diffuse_mode = 4
+albedo_texture = ExtResource( 1 )
+roughness = 0.0
+uv1_triplanar = true

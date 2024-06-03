@@ -1,0 +1,91 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "KinematicBody",
+"class": "Entity",
+"language": "GDScript",
+"path": "res://scripts/entities/entity.gd"
+}, {
+"base": "Planet",
+"class": "GreenPlanet",
+"language": "GDScript",
+"path": "res://scripts/objects/planets/green_planet.gd"
+}, {
+"base": "Resource",
+"class": "IdleState",
+"language": "GDScript",
+"path": "res://scripts/ai/idle_state.gd"
+}, {
+"base": "StaticBody",
+"class": "Planet",
+"language": "GDScript",
+"path": "res://scripts/objects/planet.gd"
+}, {
+"base": "Entity",
+"class": "PlayerEntity",
+"language": "GDScript",
+"path": "res://scripts/entities/player.gd"
+}, {
+"base": "Resource",
+"class": "SlamePersecutionState",
+"language": "GDScript",
+"path": "res://scripts/ai/slime/slame_persecution_state.gd"
+}, {
+"base": "Entity",
+"class": "Slime",
+"language": "GDScript",
+"path": "res://scripts/entities/slime.gd"
+}, {
+"base": "Resource",
+"class": "SlimeIdleState",
+"language": "GDScript",
+"path": "res://scripts/ai/slime/slime_idle_state.gd"
+} ]
+_global_script_class_icons={
+"Entity": "",
+"GreenPlanet": "",
+"IdleState": "",
+"Planet": "",
+"PlayerEntity": "",
+"SlamePersecutionState": "",
+"Slime": "",
+"SlimeIdleState": ""
+}
+
+[application]
+
+config/name="Little Prince"
+run/main_scene="res://scenes/Space.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+GameManager="*res://scripts/managers/game_manager.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/shadows/filter_mode=2
